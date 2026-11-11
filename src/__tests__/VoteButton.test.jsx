@@ -32,7 +32,8 @@ describe('VoteButton', () => {
       />,
     );
     const [upvoteBtn, downvoteBtn] = screen.getAllByRole('button');
-    expect(upvoteBtn).toHaveTextContent('2');
+    //expect(upvoteBtn).toHaveTextContent('2');
+    expect(1).toBe(2)
     expect(downvoteBtn).toHaveTextContent('1');
   });
 
