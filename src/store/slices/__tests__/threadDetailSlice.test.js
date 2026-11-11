@@ -17,7 +17,9 @@
  * 11. voteComment sukses → memanggil upVoteComment pada service
  */
 
-import { vi, describe, it, expect, beforeEach } from 'vitest';
+import {
+  vi, describe, it, expect, beforeEach,
+} from 'vitest';
 import { configureStore } from '@reduxjs/toolkit';
 import reducer, {
   fetchThreadDetail,
@@ -187,7 +189,9 @@ describe('threadDetailSlice - Thunk', () => {
 
     const store = createStore({
       threadDetail: { ...initialState, thread: { ...mockThread } },
-      auth: { token: 'test-token', user: { id: 'user-1' }, isLoading: false, error: null },
+      auth: {
+        token: 'test-token', user: { id: 'user-1' }, isLoading: false, error: null,
+      },
     });
 
     await store.dispatch(voteComment({

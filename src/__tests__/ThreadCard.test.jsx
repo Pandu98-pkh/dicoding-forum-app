@@ -8,7 +8,9 @@
  * 5. Memanggil dispatch voteThread saat vote diklik oleh user yang login
  */
 
-import { vi, describe, it, expect } from 'vitest';
+import {
+  vi, describe, it, expect,
+} from 'vitest';
 import { screen, fireEvent } from '@testing-library/react';
 import { renderWithProviders } from '../test/helpers';
 import ThreadCard from '../components/thread/ThreadCard';

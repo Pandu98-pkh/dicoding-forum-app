@@ -65,7 +65,7 @@ describe('Login Flow', () => {
     cy.wait('@loginRequest');
     cy.wait('@getMe');
 
-    cy.url().should('eq', Cypress.config('baseUrl') + '/');
+    cy.url().should('eq', `${Cypress.config('baseUrl')}/`);
   });
 
   it('3. login gagal → menampilkan pesan error dari server', () => {
