@@ -14,6 +14,10 @@ function formatDate(dateStr) {
   });
 }
 
+function stripHtml(html) {
+  return html.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
+}
+
 function truncate(text, maxLength) {
   if (text.length <= maxLength) return text;
   return `${text.slice(0, maxLength)}...`;
@@ -43,7 +47,7 @@ function ThreadCard({ thread }) {
             </Link>
           </h2>
           <p className="text-sm text-gray-500 leading-relaxed">
-            {truncate(thread.body, 200)}
+            {truncate(stripHtml(thread.body), 200)}
           </p>
         </div>
       </div>
