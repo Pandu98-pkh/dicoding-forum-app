@@ -33,6 +33,7 @@ module.exports = {
       jsx: 'never',
     }],
     'import/prefer-default-export': 'off',
+    'react/no-danger': 'off',
   },
   overrides: [
     {
