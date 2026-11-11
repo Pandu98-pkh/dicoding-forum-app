@@ -10,6 +10,11 @@ export default defineConfig({
     css: false,
     pool: 'vmThreads',
     testTimeout: 60000,
+    server: {
+      deps: {
+        inline: ['react-router', 'react-router-dom'],
+      },
+    },
     coverage: {
       provider: 'v8',
       reporter: ['text', 'html'],
