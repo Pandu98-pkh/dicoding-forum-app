@@ -10,7 +10,9 @@
  * 7. Menampilkan state aktif (highlight) ketika user sudah upvote
  */
 
-import { vi, describe, it, expect } from 'vitest';
+import {
+  vi, describe, it, expect,
+} from 'vitest';
 import { render, screen, fireEvent } from '@testing-library/react';
 import VoteButton from '../components/vote/VoteButton';
 

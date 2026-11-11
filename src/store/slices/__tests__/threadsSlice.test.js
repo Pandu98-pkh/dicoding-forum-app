@@ -21,7 +21,9 @@
  * 15. voteThread neutral → memanggil neutralVoteThread pada service
  */
 
-import { vi, describe, it, expect, beforeEach } from 'vitest';
+import {
+  vi, describe, it, expect, beforeEach,
+} from 'vitest';
 import { configureStore } from '@reduxjs/toolkit';
 import reducer, {
   fetchThreads,
@@ -183,7 +185,9 @@ describe('threadsSlice - Thunk', () => {
 
     const store = createStore({
       threads: { ...initialState, items: [mockThread] },
-      auth: { token: 'test-token', user: { id: 'user-1' }, isLoading: false, error: null },
+      auth: {
+        token: 'test-token', user: { id: 'user-1' }, isLoading: false, error: null,
+      },
     });
 
     await store.dispatch(createThread({ title: 'Thread Baru', body: 'Isi', category: 'general' }));
@@ -198,7 +202,9 @@ describe('threadsSlice - Thunk', () => {
 
     const store = createStore({
       threads: { ...initialState, items: [mockThread] },
-      auth: { token: 'test-token', user: { id: 'user-1' }, isLoading: false, error: null },
+      auth: {
+        token: 'test-token', user: { id: 'user-1' }, isLoading: false, error: null,
+      },
     });
 
     await store.dispatch(voteThread({ threadId: 'thread-1', voteType: 'up', userId: 'user-1' }));
@@ -210,7 +216,9 @@ describe('threadsSlice - Thunk', () => {
 
     const store = createStore({
       threads: { ...initialState, items: [mockThread] },
-      auth: { token: 'test-token', user: { id: 'user-1' }, isLoading: false, error: null },
+      auth: {
+        token: 'test-token', user: { id: 'user-1' }, isLoading: false, error: null,
+      },
     });
 
     await store.dispatch(voteThread({ threadId: 'thread-1', voteType: 'down', userId: 'user-1' }));
@@ -222,7 +230,9 @@ describe('threadsSlice - Thunk', () => {
 
     const store = createStore({
       threads: { ...initialState, items: [{ ...mockThread, upVotesBy: ['user-1'] }] },
-      auth: { token: 'test-token', user: { id: 'user-1' }, isLoading: false, error: null },
+      auth: {
+        token: 'test-token', user: { id: 'user-1' }, isLoading: false, error: null,
+      },
     });
 
     await store.dispatch(voteThread({ threadId: 'thread-1', voteType: 'neutral', userId: 'user-1' }));

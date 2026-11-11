@@ -9,7 +9,9 @@
  * 6. Menampilkan teks "Posting..." pada tombol saat isLoading true
  */
 
-import { vi, describe, it, expect } from 'vitest';
+import {
+  vi, describe, it, expect,
+} from 'vitest';
 import { render, screen, fireEvent } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import CommentForm from '../components/comment/CommentForm';

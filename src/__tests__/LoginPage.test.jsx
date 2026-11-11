@@ -9,9 +9,11 @@
  * 6. Tombol Login menampilkan teks "Logging in..." saat isLoading true
  */
 
-import * as authService from '../services/authService';
-import { vi, describe, it, expect, beforeEach } from 'vitest';
+import {
+  vi, describe, it, expect, beforeEach,
+} from 'vitest';
 import { screen, fireEvent, act } from '@testing-library/react';
+import * as authService from '../services/authService';
 import { renderWithProviders } from '../test/helpers';
 import LoginPage from '../pages/LoginPage';
 
