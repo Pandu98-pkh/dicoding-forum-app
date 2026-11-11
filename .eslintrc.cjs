@@ -42,6 +42,8 @@ module.exports = {
       rules: {
         'import/no-extraneous-dependencies': 'off',
         'react/jsx-filename-extension': 'off',
+        'react/jsx-props-no-spreading': 'off',
+        'react/prop-types': 'off',
       },
     },
     {
